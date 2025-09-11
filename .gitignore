@@ -1,0 +1,7 @@
+# miscellaneous
+.env
+fastopenai
+.DS_Store
+neo4j_db
+text-embeddings-inference
+neo4j.dump
