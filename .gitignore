@@ -5,3 +5,4 @@ fastopenai
 neo4j_db
 text-embeddings-inference
 neo4j.dump
+__pycache__
