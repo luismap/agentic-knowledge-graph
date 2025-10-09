@@ -30,4 +30,6 @@ Root-cause analysis might include questions like:
 * user intent/ file/ schema/ graph construction agents ![alt text](images/ufsg_agents.png)
 * entity and fact type agent ![alt text](images/entity_fact_agent.png)
 * kg construction tool ![alt text](images/kg_ctool.png)
-* 
+
+# schema proposal agent
+* schema proposal agent conceptual design ![alt text](images/schema_proposal_agent.png)
