@@ -33,3 +33,42 @@ Root-cause analysis might include questions like:
 
 # schema proposal agent
 * schema proposal agent conceptual design ![alt text](images/schema_proposal_agent.png)
+
+
+
+# notes
+
+to run gpt-oss locally mac, usin llama.cpp
+register the model for litellm
+```python
+import litellm
+from litellm.utils import register_model
+
+"""
+google adk litellm wrapper is having some inconsistensy
+add for local llm.
+1. api_base and key 
+2. also create the model with the custom/ prefix
+
+"""
+litellm.api_base = "http://localhost:8080/v1"
+litellm.api_key ="sk-123"
+
+model_id = "litellm_proxy/gptoss20b"
+configs = {
+    "model_name": model_id,
+    "litellm_params": {
+        "model": f"openai/alias",
+        "api_base": "http://localhost:8080/v1",
+        "api_key": "sk-1234"
+    }
+}
+
+#we need to register the model to litellm, since passing the args is not working
+#also, we need to pass a list of dict
+register_model([configs])
+```
+
+```bash
+llama-server -hf unsloth/gpt-oss-20b-GGUF:F16 --jinja --ctx-size 130000
+```
