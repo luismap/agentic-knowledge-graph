@@ -35,6 +35,9 @@ Root-cause analysis might include questions like:
 * schema proposal agent conceptual design ![alt text](images/schema_proposal_agent.png)
 
 
+# knowledge graph
+* simple knowledge graph ![alt text](images/simple_kg.png)
+
 
 # notes
 
